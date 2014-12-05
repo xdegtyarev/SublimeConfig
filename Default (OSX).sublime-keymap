@@ -1,0 +1,11 @@
+[
+	{ "keys": ["control+i"],  "command": "reindent" },
+	{ "keys": ["alt+c"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["alt+shift+p"], "command": "pomodoro", "args": {"workingMins": 25, "restingMins": 5} },
+	{"command": "omni_sharp_go_to_definition", "keys": ["alt+d"]},
+    {"command": "omni_sharp_rename", "keys": ["alt+r"]},
+    {"command": "omni_sharp_find_usages", "keys": ["+alt+shift+r"]},
+    {"command": "omni_sharp_code_actions", "keys": ["alt+enter"]},
+	{"command": "omni_sharp_format_document", "keys": ["ctrl+i"]},
+	// { "keys": ["super+s"], "command": ["save","omni_sharp_format_document"] },
+]

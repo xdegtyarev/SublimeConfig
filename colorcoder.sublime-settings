@@ -1,0 +1,14 @@
+{
+	"scopes": ["colorize",
+	           "meta.method.identifier ",
+	           "support.function",
+	           // "entity.name",
+	           // "punctuation",
+	           "meta.method.annotation",
+	           "storage.type",
+	           "storage.modifier",
+	           "meta.toc-list.region.source.cs",
+	           "variable.other",
+	           // "storage.type.generic.source.cs"
+	           ]
+}
