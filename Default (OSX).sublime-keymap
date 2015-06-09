@@ -7,5 +7,6 @@
     {"command": "omni_sharp_find_usages", "keys": ["+alt+shift+r"]},
     {"command": "omni_sharp_code_actions", "keys": ["alt+enter"]},
 	{"command": "omni_sharp_format_document", "keys": ["ctrl+i"]},
-	// { "keys": ["super+s"], "command": ["save","omni_sharp_format_document"] },
+	{"command": "omni_sharp_next_code_issue", "keys": ["alt+]"]},
+    {"command": "omni_sharp_last_code_issue", "keys": ["alt+["]}
 ]
