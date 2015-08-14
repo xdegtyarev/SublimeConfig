@@ -1,7 +1,7 @@
 {
 	"caret_style": "phase",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Colorcoder/preap (Colorcoded) (SL) (Colorcoded).tmTheme",
+	"color_scheme": "Packages/Colorcoder/Material-Theme (Colorcoded).tmTheme",
 	"draw_centered": true,
 	"enable_tab_scrolling": false,
 	"findreplace_small": true,
@@ -16,11 +16,10 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"CSS",
 		"Vintage"
 	],
 	"open_files_in_new_window": false,
-	"original_color_scheme": "Packages/User/SublimeLinter/preap (Colorcoded) (SL).tmTheme",
+	"original_color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
 	"overlay_scroll_bars": "enabled",
 	"preview_on_click": false,
 	"reveal-on-activate": true,
@@ -30,7 +29,7 @@
 	"sidebar_small": true,
 	"tab_height_short": true,
 	"tabs_medium": true,
-	"theme": "preap.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": false
 }

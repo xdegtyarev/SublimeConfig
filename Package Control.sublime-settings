@@ -4,13 +4,9 @@
 	],
 	"installed_packages":
 	[
-		"BracketHighlighter",
 		"Colorcoder",
-		"DashDoc",
-		"Material Color Scheme",
+		"Material Theme",
 		"OmniSharp",
-		"Package Control",
-		"Preap",
-		"SyntaxFold"
+		"Package Control"
 	]
 }

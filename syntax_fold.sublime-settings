@@ -1,8 +1,0 @@
-{
-	"default":
-	{
-		"endMarker": "#endregion",
-		"name": "Default",
-		"startMarker": "#region"
-	}
-}
