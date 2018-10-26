@@ -1,0 +1,3 @@
+[submodule "OmniSharp"]
+	path = OmniSharp
+	url = https://github.com/xdegtyarev/OmniSharpSublime.git
