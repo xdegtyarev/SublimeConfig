@@ -1,0 +1,1 @@
+{"description": "A sublime text plugin which aim at boosting happiness when editing Unity Shader, behaved as IDE-like, followed the lastest Unity release.", "sublime_text": ">=3092", "platforms": ["*"], "url": "https://github.com/waqiju/unity_shader_st3", "version": "0.3.5", "dependencies": []}

@@ -1,0 +1,74 @@
+%YAML 1.2
+---
+name: UnityShader
+file_extensions: [shader, cginc]
+first_line_match: Shader[\s]+\"[^\"]*\"[\s]*({[\s]*)?
+scope: source.shader
+
+variables:
+  subshader_state_identifier: 'Category|SeparateSpecular|Fog|Material|ColorMaterial|Name|UsePass|Tags|LOD|Cull|Blend|AlphaTest|AlphaToMask|ColorMask|Lighting|ZTest|ZWrite|BindChannels|Pass|GrabPass|return|Stencil|SetTexture|Offset|ENDCG'
+
+contexts:
+  global:
+    # comment
+    - match: //.*$
+      scope: comment.shader
+    - match: /\*
+      push:
+        - meta_scope: comment.shader
+        - match: \*/
+          pop: true
+    # string literals
+    - match: \"[^\"]*\"
+      scope: string.quoted.double.shader
+    # number literals (vector contain comma)
+    - match: \b([-+]?([\d]*[\.]?[\d]+)[fF]?[\s]*,[\s]*)*([-+]?([\d]*[\.]?[\d]+)[fF]?)\b
+      # [-+]?([\d]*[\.]?[\d]+)[fF]? float
+      # [\s]*,[\s]* comma
+      scope: constant.numeric.shader
+
+  prototype:
+    - include: global
+
+  main:
+    - match: \b(Shader|FallBack|Fallback|CustomEditor|Dependency|ENDCG)\b
+      scope: keyword.control.shader
+    - match: \b(Properties)\b
+      scope: keyword.control.shader
+      push:
+        - match: "{"
+          set: properties
+    - match: \b(SubShader|Category)\b
+      scope: keyword.control.shader
+      push:
+        - match: "{"
+          set: subshader
+    - include: cg_include
+
+  properties:
+    # ShaderLab Variables Type
+    - meta_scope: meta.block.properties.shader
+    - match: \b(Color|Vector|Range|Int|Float|2D|Cube|3D)\b
+      scope: storage.type.shader
+    - match: "{"
+      push: properties
+    - match: "}"
+      pop: true
+
+  subshader:
+    - meta_scope: meta.block.subshader.shader
+    - match: \b{{subshader_state_identifier}}\b
+      scope: keyword.control.shader
+    - include: cg_include
+    - match: "{"
+      push: subshader
+    - match: "}"
+      pop: true
+
+  cg_include:
+    - match: CGPROGRAM|CGINCLUDE
+      scope: keyword.control.shader
+      push: unityshader-cg.sublime-syntax
+      with_prototype:
+        - match: (?=ENDCG)
+          pop: true

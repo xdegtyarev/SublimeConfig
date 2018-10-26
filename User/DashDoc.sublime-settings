@@ -1,0 +1,7 @@
+{
+  "syntax_sensitive_as_default": true,
+  "syntax_docset_map":
+  {
+    "C#": ["net","unity3d"],
+    }
+}
